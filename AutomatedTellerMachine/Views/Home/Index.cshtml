@@ -1,0 +1,103 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-6 margin-top-20">
+        <span class="label label-success margin-top-20 pull-left">Basic:</span>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 margin-top-20">
+        <a href="#" class="btn btn-primary btn-large btn-block">
+            <span class="glyphicon glyphicon-circle-arrow-down" /> Withdrawal
+        </a>
+        <a href="#" class="btn btn-primary btn-large btn-block">
+            <span class="glyphicon glyphicon-flash" /> Quick Cash $100
+        </a>
+        <a href="@Url.Action("Details","CheckingAccount")" class="btn btn-primary btn-large btn-block">
+            <span class="glyphicon glyphicon-question-sign" /> Balance Inquiry
+        </a>
+@if (ViewBag.Admin == true)
+{
+        <span class="label label-success margin-top-20 pull-left">Extended:</span>
+}
+    </div>
+    <div class="col-md-6 margin-top-20">
+        <span></span>
+        <a href="#" class="btn btn-primary btn-large btn-block">
+            <span class="glyphicon glyphicon-print" /> Print Statement
+        </a>
+        <a href="#" class="btn btn-primary btn-large btn-block">
+            <span class="glyphicon glyphicon-transfer" /> Transfer Funds
+        </a>
+        <a href="@Url.Action("Create","Transaction", new { checkingAccountId= ViewBag.CheckingAccountId})" class="btn btn-primary btn-large btn-block">
+            <span class="glyphicon glyphicon-circle-arrow-up" /> Deposit
+        </a>
+    </div>
+
+    <!--<p>@@Html.ActionLink("Register","Register","Account",null,
+     new { @@class = "btn btn-default"})</p> -->
+</div>
+@if (ViewBag.Admin == true)
+{
+
+    <div class="row">
+        <div class="col-md-6 margin-top-20">
+            <a href="@Url.Action("List","CheckingAccount")" class="btn btn-primary btn-large btn-block">
+                <span class="glyphicon glyphicon-list-alt" /> List Accounts
+            </a>
+        </div>
+
+        <div class="col-md-6 margin-top-20">
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+}
+
+
+@DateTime.Now.ToString(CultureInfo.InvariantCulture)
+
+@section scripts {
+    <script>var testing = true;</script>
+
+}
+
+
+@*
+    @ViewBag.Pin
+    You are using @Request.Browser.Browser, and that's cool.
+
+        @{var amounts = new List<Decimal> { 100, 25.50m, -40, 275.99m };
+        }
+
+        <ul>
+            @foreach (decimal amount in amounts)
+            {
+                <li>@formatAmount(amount)</li>
+            }
+        </ul>
+
+
+
+
+        @helper formatAmount(decimal amount)
+        {
+        var color = "green";
+        if (amount < 0)
+        { color = "red"; }
+
+            <span style="color:@color"> @String.Format("{0:c}", amount) </span>
+        }
+*@

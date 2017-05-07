@@ -37,6 +37,21 @@ namespace AutomatedTellerMachine.Migrations
                 userManager.AddToRole(user.Id, "Admin");
             }
 
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
 
             //  This method will be called after migrating to the latest version.
 

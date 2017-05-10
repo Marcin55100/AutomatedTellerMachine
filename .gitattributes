@@ -1,3 +1,5 @@
+AutomatedTellerMachine/Scripts/* linguist-vendored
+
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
@@ -62,4 +64,3 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-Scripts/* linguist-vendored

@@ -14,6 +14,7 @@ namespace AutomatedTellerMachine.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "AutomatedTellerMachine.Models.ApplicationDbContext";
         }
 
@@ -36,22 +37,22 @@ namespace AutomatedTellerMachine.Migrations
                 context.SaveChanges();
                 userManager.AddToRole(user.Id, "Admin");
             }
-
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
-            context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            // Seed example data
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 100, CheckingAccountId = 3 });
+            //context.Transactions.Add(new Transaction { Amount = 200, CheckingAccountId = 3 });
 
             //  This method will be called after migrating to the latest version.
 
